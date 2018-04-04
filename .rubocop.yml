@@ -1,0 +1,64 @@
+require: rubocop-rspec
+
+Style/MultilineIfModifier:
+  Exclude:
+    - 'app/admin/**/*'
+
+Style/Encoding:
+  Enabled: false
+
+Style/IdenticalConditionalBranches:
+  Exclude:
+    - 'app/views/**/*'
+
+Metrics/ModuleLength:
+  Max: 200
+
+Metrics/LineLength:
+  Max: 125
+
+Metrics/BlockLength:
+  Max: 40
+  Exclude:
+    - 'app/admin/**/*'
+    - 'lib/tasks/dev_seeds.rake'
+    - 'spec/**/*'
+
+Metrics/AbcSize:
+  Enabled: false
+
+Rails:
+  Enabled: true
+
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - 'config/**/*'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'spec/spec_helper.rb'
+    - 'test/test_helper.rb'
+    - 'Guardfile'
+    - 'lib/tasks/auto_annotate_models.rake'
+    - 'spec/tasks/*'
+    - 'node_modules/**/*'
+
+  TargetRubyVersion: 2.5.0
+
+# https://github.com/bbatsov/rubocop/issues/3629
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 10
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
